@@ -26,5 +26,11 @@ It is also capable of handling non-vector inputs, such as lists and dataframes.
 Values of NA will throw an error as they cannot be assigned a value of true/false.
 }
 \examples{
+# You can use countNonZero on most vectors, including numeric, character, and boolean
 countNonZero(seq(0,5))
+countNonZero(c("1","0","0","1"))
+countNonZero(c(TRUE, FALSE, TRUE, TRUE))
+
+# Alternatively, you can supply a dataframe as an argument as well
+countNonZero(df)
 }

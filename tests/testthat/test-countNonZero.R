@@ -1,3 +1,5 @@
+df <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "Jeff"), "First_Aid_Training"=c(0,1,1,0,1))
+
 test_that("numeric vectors work", {
   expect_equal(countNonZero(c(0, 0, 0)), 0)
   expect_equal(countNonZero(c(1, 1, 1)), 3)

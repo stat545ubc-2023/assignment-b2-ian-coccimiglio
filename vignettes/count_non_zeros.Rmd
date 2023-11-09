@@ -1,0 +1,26 @@
+---
+title: "Count Non Zeros"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{count_reals}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(visian)
+
+```
+
+Data often requires some pre-processing in order to determine that your data is clean. The visian package provides this functionality. Currently, it features just one function - `countNonZero()` - allowing a clean base-R function to interpret data and models.
+
+```{r example}
+countNonZero(seq(0,5))
+```

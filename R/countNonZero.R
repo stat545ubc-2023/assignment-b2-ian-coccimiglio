@@ -11,7 +11,14 @@
 #' @return numNonZero An integer count of non zero values
 #' @export
 #'
-#' @examples countNonZero(seq(0,5))
+#' @examples
+#' # You can use countNonZero on most vectors, including numeric, character, and boolean
+#' countNonZero(seq(0,5))
+#' countNonZero(c("1","0","0","1"))
+#' countNonZero(c(TRUE, FALSE, TRUE, TRUE))
+#'
+#' # Alternatively, you can supply a dataframe as an argument as well
+#' countNonZero(df)
 countNonZero <- function(vec) {
   if (is.data.frame(vec)) {
     print("Note: Counting non-zero entries across all rows and columns")
