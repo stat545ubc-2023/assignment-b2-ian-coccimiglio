@@ -19,3 +19,5 @@ test_that("NAs create errors", {
 test_that("Dataframes are counted for each column", {
   expect_equal(countNonZero(df), c("Name"=5,"First_Aid_Training"=3))
 })
+
+rm('df')
