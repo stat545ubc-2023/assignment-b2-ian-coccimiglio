@@ -1,4 +1,4 @@
-df <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "Jeff"), "First_Aid_Training"=c(0,1,1,0,1))
+df <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "Sam"), "First_Aid_Training"=c(0,1,1,0,1))
 
 test_that("numeric vectors work", {
   expect_equal(countNonZero(c(0, 0, 0)), 0)
@@ -16,6 +16,6 @@ test_that("NAs create errors", {
   expect_error(countNonZero(c(1, 0, NA)))
 })
 
-test_that("Dataframes are counted across all columns", {
-  expect_equal(countNonZero(df), 8)
+test_that("Dataframes are counted for each column", {
+  expect_equal(countNonZero(df), c("Name"=5,"First_Aid_Training"=3))
 })

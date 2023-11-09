@@ -1,7 +1,7 @@
 Package: visian
 Title: Non-Zero counter
 Version: 0.1.0
-Authors@R: person("Ian", "Coccimiglio", middle="Francisco", "icoccimi@gmail.com", role = c("aut", "cre"))
+Authors@R: person("Ian", "Coccimiglio", , "icoccimi@gmail.com", role = c("aut", "cre"))
 Description: Visian provides functionality to count real (i.e., non-zero) data of various types, lengths, and structures. Only requires base R.
 License: MIT + file LICENSE
 Encoding: UTF-8

@@ -2,7 +2,7 @@
 title: "Count Non Zeros"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{count_reals}
+  %\VignetteIndexEntry{Count Non Zeros}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,17 +12,43 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
-
-```{r setup}
 library(visian)
 
 ```
 
 Data often requires some pre-processing in order to determine that your data is clean. The visian package provides this functionality. Currently, it features just one function - `countNonZero()` - allowing a clean base-R function to interpret data and models.
 
-```{r example}
+### Counting zeros in numeric data
+This function is very flexible and works on a variety of inputs. In its simplest usage, this function takes in an ordinary numeric vector, and returns the number of non-zero elements. 
+
+```{r numer}
 countNonZero(seq(0,5))
 ```
 
+### Counting zeros in non-numeric data
+However, the function handles non-typical inputs as well, such as string vectors and boolean vectors:
 
+```{r}
+string_vec <- countNonZero(c("0", "0", "1", "2"))
+bool_vec <- countNonZero(c(FALSE, TRUE, TRUE, TRUE, FALSE))
+print(paste("String Vector =",string_vec))
+print(paste("Boolean Vector =",bool_vec))
+```
+
+### Counting zeros on columns of a dataframe
+In more practical usage, you may decide to run the function on a specific column of the dataframe. In this example, we'd be interested in counting the number of people who have first aid training.
+
+```{r}
+df <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "James"), "First_Aid_Training"=c(0,1,1,0,1))
+countNonZero(df$First_Aid_Training)
+```
+
+### Counting zeros on an entire dataframe
+And you might be interested in getting a grand summary of a dataframe, on every column of the data-frame. This creates a named vector, such that each column reports the number of non-zero values in the column.
+
+```{r}
+df_nums <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "James"), "First_Aid_Training"=c(0,1,1,0,1))
+countNonZero(df_nums$First_Aid_Training)
+```
+
+I hope this package is helpful to you!

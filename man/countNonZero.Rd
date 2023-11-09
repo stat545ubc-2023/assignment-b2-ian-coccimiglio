@@ -11,9 +11,7 @@ Values of NA will throw an error as they cannot be assigned a value of true/fals
 countNonZero(vec)
 }
 \arguments{
-\item{vec}{A vector of inputs.
-The name suggests that this function is designed to operate on generic vectors,
-and not explicitly designed for higher level structures.}
+\item{vec}{A vector or dataframe, featuring possible zeros.}
 }
 \value{
 numNonZero An integer count of non zero values
@@ -26,11 +24,14 @@ It is also capable of handling non-vector inputs, such as lists and dataframes.
 Values of NA will throw an error as they cannot be assigned a value of true/false.
 }
 \examples{
+df <- data.frame("ID"=as.character(seq(1,5)), "First_Aid_Training"=c(0,1,1,0,1))
 # You can use countNonZero on most vectors, including numeric, character, and boolean
 countNonZero(seq(0,5))
 countNonZero(c("1","0","0","1"))
 countNonZero(c(TRUE, FALSE, TRUE, TRUE))
 
-# Alternatively, you can supply a dataframe as an argument as well
+# Alternatively, you can supply a dataframe as an argument as well.
+# This will calculate the number of non-zero entries in each column and return a vector.
 countNonZero(df)
+
 }
