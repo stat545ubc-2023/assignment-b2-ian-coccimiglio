@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Visian is a package which helps you determine the number of real values
-in your dataset.
+Visian is a package which helps you determine the number of non-zero
+values in your dataset.
 
 ## Installation
 
@@ -30,3 +30,19 @@ num_vec <- c(1,2,3,4,5,0,0,0)
 countNonZero(num_vec)
 #> [1] 5
 ```
+
+However, the function can also be used with non-standard inputs,
+including character and boolean vectors, as well as dataframes. It does
+not calculate on data which has NAs present.
+
+``` r
+str_vec <- c("A", "B", "0")
+countNonZero(str_vec)
+#> [1] 2
+
+bool_vec <- c(FALSE, TRUE, TRUE, FALSE)
+countNonZero(bool_vec)
+#> [1] 2
+```
+
+I hope you find this package useful and robust.
