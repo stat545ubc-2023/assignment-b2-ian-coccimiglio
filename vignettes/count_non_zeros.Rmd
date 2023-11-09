@@ -24,3 +24,5 @@ Data often requires some pre-processing in order to determine that your data is 
 ```{r example}
 countNonZero(seq(0,5))
 ```
+
+

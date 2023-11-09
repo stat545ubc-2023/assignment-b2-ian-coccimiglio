@@ -16,7 +16,7 @@ You can install the development version of visian from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2023/visian")
+devtools::install_github("stat545ubc-2023/visian", build_vignettes = TRUE)
 ```
 
 ## Example
