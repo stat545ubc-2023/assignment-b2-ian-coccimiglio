@@ -16,7 +16,7 @@ library(visian)
 
 ```
 
-Data often requires some pre-processing in order to determine that your data is clean. The visian package provides this functionality. Currently, it features just one function - `countNonZero()` - allowing a clean base-R function to interpret data and models.
+Data often requires some pre-processing to ensure the validity of data. The visian package provides this functionality. Currently, it features just one function - `countNonZero()` - allowing a clean base-R function to interpret data and models.
 
 ### Counting zeros in numeric data
 This function is very flexible and works on a variety of inputs. In its simplest usage, this function takes in an ordinary numeric vector, and returns the number of non-zero elements. 
@@ -48,7 +48,7 @@ And you might be interested in getting a grand summary of a dataframe, on every 
 
 ```{r}
 df_nums <- data.frame('Name'=c("John", "Sarah", "Jeff", "Karen", "James"), "First_Aid_Training"=c(0,1,1,0,1))
-countNonZero(df_nums$First_Aid_Training)
+countNonZero(df_nums)
 ```
 
 I hope this package is helpful to you!
