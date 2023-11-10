@@ -2,11 +2,7 @@
 % Please edit documentation in R/countNonZero.R
 \name{countNonZero}
 \alias{countNonZero}
-\title{Non-zero element counter
-This function returns the number of non-zero elements in a vector
-(including values that can be coerced to equal 0, such as FALSE and "0").
-It is also capable of handling non-vector inputs, such as lists and dataframes.
-Values of NA will throw an error as they cannot be assigned a value of true/false.}
+\title{Non-zero element counter}
 \usage{
 countNonZero(vec)
 }
@@ -17,7 +13,6 @@ countNonZero(vec)
 numNonZero An integer count of non zero values
 }
 \description{
-Non-zero element counter
 This function returns the number of non-zero elements in a vector
 (including values that can be coerced to equal 0, such as FALSE and "0").
 It is also capable of handling non-vector inputs, such as lists and dataframes.

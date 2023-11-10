@@ -1,4 +1,5 @@
 #' Non-zero element counter
+#' @description
 #' This function returns the number of non-zero elements in a vector
 #' (including values that can be coerced to equal 0, such as FALSE and "0").
 #' It is also capable of handling non-vector inputs, such as lists and dataframes.
