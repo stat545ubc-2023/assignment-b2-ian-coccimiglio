@@ -32,12 +32,12 @@ countNonZero(num_vec)
 ```
 
 However, the function can also be used with non-standard inputs,
-including character and boolean vectors, as well as dataframes. It does
-not calculate on data which has NAs present.
+including character and boolean vectors, as well as count-non-zeros in
+dataframe columns.
 
 ``` r
-str_vec <- c("A", "B", "0")
-countNonZero(str_vec)
+char_vec <- c("A", "B", "0")
+countNonZero(char_vec)
 #> [1] 2
 
 bool_vec <- c(FALSE, TRUE, TRUE, FALSE)
