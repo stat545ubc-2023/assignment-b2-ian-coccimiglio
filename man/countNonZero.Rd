@@ -13,7 +13,7 @@ countNonZero(vec)
 numNonZero An integer vector of non zero values
 }
 \description{
-This function returns the number of non-zero elements in a vector.
+This function returns an integer of the non-zero elements in a vector.
 
 It is also capable of handling non-vector inputs, such as lists and dataframes.
 Values of NA will throw an error as they cannot be assigned a value of true/false.
