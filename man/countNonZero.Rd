@@ -10,7 +10,7 @@ countNonZero(vec)
 \item{vec}{A vector or dataframe, featuring possible zeros.}
 }
 \value{
-numNonZero An integer count of non zero values
+numNonZero An integer count of non zero values, or a named-integer of non-zero values.
 }
 \description{
 This function returns the number of non-zero elements in a vector.

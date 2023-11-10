@@ -9,7 +9,7 @@
 #'
 #' @param vec A vector or dataframe, featuring possible zeros.
 #'
-#' @return numNonZero An integer count of non zero values
+#' @return numNonZero An integer count of non zero values, or a named-integer of non-zero values.
 #' @export
 #'
 #' @examples
