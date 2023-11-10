@@ -2,14 +2,14 @@
 #' Non-zero element counter
 #'
 #' @description
-#' This function returns the number of non-zero elements in a vector.
+#' This function returns an integer of the non-zero elements in a vector.
 #'
 #' It is also capable of handling non-vector inputs, such as lists and dataframes.
 #' Values of NA will throw an error as they cannot be assigned a value of true/false.
 #'
 #' @param vec A vector or dataframe, featuring possible zeros.
 #'
-#' @return numNonZero An integer count of non zero values, or a named-integer of non-zero values.
+#' @return numNonZero An integer vector of non zero values
 #' @export
 #'
 #' @examples
@@ -30,7 +30,7 @@ countNonZero <- function(vec) {
 
   if (is.data.frame(vec)) {
     print("Dataframe input: Counting non-zero entries for each row and column")
-    numNonZero <- apply(nonZeroElements, 2, sum)
+    numNonZero <- as.integer(apply(nonZeroElements, 2, sum))
   }
   else {
     numNonZero <- sum(nonZeroElements)

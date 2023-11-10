@@ -40,7 +40,7 @@ num_vec <- c(1,2,3,4,5,0,0,0)
 countNonZero(num_vec)
 ```
 
-However, the function can also be used with non-standard inputs, including character and boolean vectors, as well as count-non-zeros in dataframe columns.
+However, the function can also be used with non-standard inputs, including character and boolean vectors, as well as count non-zeros in dataframe columns.
 
 ```{r}
 char_vec <- c("A", "B", "0")

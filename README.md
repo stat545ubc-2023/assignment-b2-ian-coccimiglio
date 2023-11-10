@@ -32,7 +32,7 @@ countNonZero(num_vec)
 ```
 
 However, the function can also be used with non-standard inputs,
-including character and boolean vectors, as well as count-non-zeros in
+including character and boolean vectors, as well as count non-zeros in
 dataframe columns.
 
 ``` r
